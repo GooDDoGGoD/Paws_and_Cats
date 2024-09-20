@@ -10,10 +10,7 @@ repositories {
 }
 
 dependencies {
-    testImplementation(platform("org.junit:junit-bom:5.10.0"))
-    testImplementation("org.junit.jupiter:junit-jupiter")
-}
-
-tasks.test {
-    useJUnitPlatform()
+    implementation("org.hibernate.orm:hibernate-core:6.6.1.Final")
+    implementation("org.postgresql:postgresql:42.5.0")
+    implementation("javax.persistence:javax.persistence-api:2.2")
 }
