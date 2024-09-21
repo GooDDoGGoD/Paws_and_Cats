@@ -13,6 +13,7 @@ repositories {
 
 dependencies {
     implementation(project(":Data_Access"))
+    implementation(project(":Data_Transfer"))
 
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")

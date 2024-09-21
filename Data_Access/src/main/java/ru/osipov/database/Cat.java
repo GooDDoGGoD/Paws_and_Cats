@@ -44,15 +44,12 @@ public class Cat {
     public void setColor(String color) {
         this.color = color;
     }
-
     public void setBreed(String breed) {
         this.breed = breed;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public void setBirthday(LocalDate birthday) {
         this.birthday = birthday;
     }
@@ -60,8 +57,16 @@ public class Cat {
     public String getName() {
         return name;
     }
-
     public Integer getId() {
         return id;
+    }
+    public LocalDate getBirthday() {
+        return birthday;
+    }
+    public String getBreed() {
+        return breed;
+    }
+    public String getColor() {
+        return color;
     }
 }

@@ -10,4 +10,5 @@ import java.util.List;
 public interface CatDao extends JpaRepository<Cat, Integer> {
     Cat findById(int id);
     List<Cat> findAll();
+    List<Cat> findByColor(String color);
 }
