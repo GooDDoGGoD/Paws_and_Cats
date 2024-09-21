@@ -1,5 +1,6 @@
 package ru.osipov.database;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.osipov.DAO.OwnerDao;
 
@@ -7,11 +8,8 @@ import java.util.List;
 
 @Service
 public class OwnerSeviceImpl implements OwnerService{
-    private final OwnerDao ownerDao;
-
-    public OwnerSeviceImpl(OwnerDao ownerDao) {
-        this.ownerDao = ownerDao;
-    }
+    @Autowired
+    private OwnerDao ownerDao;
 
     @Override
     public Owner getOwnerById(int id) {

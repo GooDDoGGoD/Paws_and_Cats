@@ -1,5 +1,6 @@
 package ru.osipov.database;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.osipov.DAO.CatDao;
 
@@ -7,11 +8,8 @@ import java.util.List;
 
 @Service
 public class CatServiceImpl implements CatService {
-    private final CatDao catDao;
-
-    public CatServiceImpl(CatDao catDao) {
-        this.catDao = catDao;
-    }
+    @Autowired
+    private CatDao catDao;
 
     @Override
     public Cat getCatById(int id) {
