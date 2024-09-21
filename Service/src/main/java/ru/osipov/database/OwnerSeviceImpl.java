@@ -1,9 +1,11 @@
 package ru.osipov.database;
 
+import org.springframework.stereotype.Service;
 import ru.osipov.DAO.OwnerDao;
 
 import java.util.List;
 
+@Service
 public class OwnerSeviceImpl implements OwnerService{
     private final OwnerDao ownerDao;
 
@@ -28,7 +30,7 @@ public class OwnerSeviceImpl implements OwnerService{
 
     @Override
     public void updateOwner(Owner owner) {
-        ownerDao.update(owner);
+        ownerDao.save(owner);
     }
 
     @Override

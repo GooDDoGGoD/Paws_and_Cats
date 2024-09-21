@@ -9,7 +9,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/Controller" />
             <option value="$PROJECT_DIR$/Data_Access" />
+            <option value="$PROJECT_DIR$/Data_Transfer" />
             <option value="$PROJECT_DIR$/Service" />
           </set>
         </option>

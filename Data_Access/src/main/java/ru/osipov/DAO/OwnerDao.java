@@ -1,13 +1,13 @@
 package ru.osipov.DAO;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import ru.osipov.database.Owner;
 
 import java.util.List;
 
-public interface OwnerDao {
+@Repository
+public interface OwnerDao extends JpaRepository<Owner, Integer> {
     Owner findById(int id);
     List<Owner> findAll();
-    void save(Owner owner);
-    void update(Owner owner);
-    void delete(Owner owner);
 }

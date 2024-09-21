@@ -1,9 +1,11 @@
 package ru.osipov.database;
 
+import org.springframework.stereotype.Service;
 import ru.osipov.DAO.CatDao;
 
 import java.util.List;
 
+@Service
 public class CatServiceImpl implements CatService {
     private final CatDao catDao;
 
@@ -28,7 +30,7 @@ public class CatServiceImpl implements CatService {
 
     @Override
     public void updateCat(Cat cat) {
-        catDao.update(cat);
+        catDao.save(cat);
     }
 
     @Override

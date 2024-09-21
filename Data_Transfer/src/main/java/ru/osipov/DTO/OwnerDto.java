@@ -6,4 +6,5 @@ public class OwnerDto {
     private Integer id;
     private String name;
     private LocalDate birthDate;
+
 }

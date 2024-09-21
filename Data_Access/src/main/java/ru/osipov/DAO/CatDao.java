@@ -1,13 +1,13 @@
 package ru.osipov.DAO;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 import ru.osipov.database.Cat;
 
 import java.util.List;
 
-public interface CatDao {
+@Repository
+public interface CatDao extends JpaRepository<Cat, Integer> {
     Cat findById(int id);
     List<Cat> findAll();
-    void save(Cat cat);
-    void update(Cat cat);
-    void delete(Cat cat);
 }
