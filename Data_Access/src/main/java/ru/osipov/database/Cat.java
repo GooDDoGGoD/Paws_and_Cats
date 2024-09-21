@@ -1,6 +1,6 @@
 package ru.osipov.database;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,4 +28,40 @@ public class Cat {
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
+
+    public void addFriend(Cat friend) {
+        friends.add(friend);
+    }
+
+    public void removeFriend(Cat friend) {
+        friends.remove(friend);
+    }
+
+    public List<Cat> getFriends() {
+        return friends;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setBirthday(LocalDate birthday) {
+        this.birthday = birthday;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getId() {
+        return id;
+    }
 }
